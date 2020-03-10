@@ -1,0 +1,344 @@
+/*this is variables we use in this design*/
+:root {
+    --my-font:'Sen', sans-serif;
+    --my-second-font:'Slabo 27px', serif;
+    --mainColor: #FF923B;
+      
+  }
+
+  body{
+      height: 3000px;
+  }
+/*the main navbar*/
+.navbar-inverse{
+    min-height: 60px;
+    border: none;
+    font-family: var(--my-font);
+    margin-bottom:0px;
+    border-radius: 0;
+}
+
+/*navbar toggle*/
+.navbar-toggle {
+    margin-top: 13px;
+}
+
+ /*here we changed the background color of the active link*/
+.navbar-inverse .navbar-nav > .active > a,
+.navbar-inverse .navbar-nav > .active > a:hover,
+.navbar-inverse .navbar-nav > .active > a:focus{
+    background-color:#ff923b;
+}
+
+/*the color of the links in the nav*/
+.navbar-inverse .navbar-nav > li > a {
+    color: #BBBBBB;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    font-size: 15px;
+}
+.navbar-inverse .navbar-nav > li > a:hover,
+.navbar-inverse .navbar-nav > li > a:focus{
+    color:#ff923b;
+}
+/*the main navbar*/
+
+
+/*brand name*/
+.navbar-inverse .navbar-brand {
+    color: #BBBBBB;
+    font-size: 35px;
+    line-height: 35px;
+    align-items: center;
+    min-height: 60px;
+    /*here is the animation of the background*/
+    background:
+    linear-gradient(
+      to right,
+      var(--mainColor) 0%,
+      var(--mainColor) 5px,
+      transparent 5px
+    );
+    background-repeat: repeat-x;
+    background-size: 100%;
+    padding-left: 10px;
+    transition: all .3s ease;
+}
+.navbar-inverse .navbar-brand:hover {
+    background:
+       linear-gradient(
+         to right,
+         var(--mainColor) 0%,
+         var(--mainColor) 5px,
+         transparent
+       );
+  }
+/*brand name*/
+
+/*dropdown menu*/
+.navbar-right .dropdown-menu {
+    left: 0;
+    right: auto;
+    background-color: #676767;
+    border-top: 2px solid #FF923B;
+    min-width: 180px;
+}
+.dropdown-menu > li > a {
+    color:#FF923B; 
+    padding: 8px 20px;
+    transition: padding .3s ease-in-out;
+}
+.dropdown-menu > li > a:hover,
+.dropdown-menu > li > a:focus{
+    background-color:#FF923B;
+    color: #FFFFFF;
+    padding-left: 22px;
+}
+.dropdown-menu .divider {
+    background-color: #8e725b;
+}
+/*dropdown menu*/
+
+
+/*start editing the carousel*/
+
+.carousel-caption .btn {
+    margin-right: 20px;
+
+}
+
+.btn {
+    margin-bottom: 20px;
+}
+
+.carousel-caption {
+    bottom: 500px;
+    font-family: var(--my-font);
+    background:hsla(29, 89%, 86%, 0.274);
+    border-radius: 30px;
+    padding-right: 20px;
+    padding-left: 20px;
+}
+/*here fix the issue of resizing images while zooming in & out*/
+.img-responsive, .thumbnail > img, .thumbnail a > img, .carousel-inner > .item > img, .carousel-inner > .item > a > img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+
+.carousel-caption .lead{
+    color: #2d251f;
+}
+
+.carousel-caption h1{
+    color: #FF923B;
+}
+
+.btn-danger {
+    background-color:#FF923B;
+    border-color: #f1dbda;
+}
+
+.btn-danger:hover {
+    background-color:#FFF;
+    border-color: #FF923B;
+    color: var(--mainColor) ;
+}
+
+.carousel-indicators li{
+    width: 20px;
+    height: 10px;
+}
+
+.carousel-indicators .active{
+    width: 20px;
+    height: 12px;
+    background-color: var(--mainColor);
+}
+
+
+.glyphicon-chevron-left:before,
+.glyphicon-chevron-right:before{
+    color: var(--mainColor);
+}
+
+/*end the carousel*/
+
+/*start about section*/
+.about{
+text-align: center;
+padding:60px 0 60px 0;
+font-family: var(--my-font);
+}
+.about h1{
+    font-weight: bold;
+}
+
+.about .lead{
+    color: 888;
+    margin-top: 15px;
+    font-size: 25px;
+}
+
+.about p span{
+    color: var(--mainColor);
+}
+
+/*end about section*/
+
+/*start features section*/
+
+.features{
+    padding-top: 30px;
+    padding-bottom: 30px;
+    font-family: var(--my-font);
+}
+
+.features h1{
+    color: var(--mainColor);
+}
+
+.features hr {
+    width: 6%;
+    margin-bottom: 60px;
+    border-top: none;
+    border-bottom: none;
+    border-style: dashed;
+    border-width: 0.5em;
+    border-bottom: none;
+    color: #eaeaea;
+}
+.features .feat{
+    margin-bottom: 30px;
+}
+
+.features .feat span{
+    margin-bottom: 10px;
+    font-size: 35px;
+    color: var(--mainColor);
+    padding: 10px 20px;
+    border-radius: 20px;
+    border: 1px solid #eaeaea ;
+}
+
+
+.features .feat p{
+    font-family:var(--my-second-font)
+}
+
+/*End features section*/
+
+
+/*start testimonials section*/
+/*we made a div and gave it absolute position to be a background and put our icons inside it*/
+.testimonials-background{
+    position: absolute;
+    min-height: 400px;  /*this minimum height just to be the same height of the testimonial's*/
+}
+
+.testimonials-background span{
+    position: absolute;
+    color: rgba(255, 148, 61, 0.13);
+}
+.testimonials-background span:first-of-type{
+    font-size: 100px;
+    right: 20%;
+    top: 5%;
+    transform: rotate(-20deg);
+}
+
+.testimonials-background span:nth-of-type(2){
+    font-size: 60px;
+    right: 25%;
+    top: 70%;
+    transform: rotate(-30deg);
+}
+
+.testimonials-background span:nth-of-type(3){
+    font-size: 80px;
+    transform: rotate(30deg);
+}
+.testimonials-background span:nth-of-type(4){
+    top: 65%;
+    transform: rotate(30deg);
+    font-size: 110px
+}
+/*we made a div and gave it absolute position to be a background and put our icons inside it*/
+
+
+.testimonials{
+    padding-top: 50px;
+    padding-bottom:50px;
+    min-height: 400px; /*this minimum height just to be the same height of the background's*/
+    background-color: rgba(235, 235, 235, 0.29);
+}
+.testimonials .carousel-inner{
+    min-height: 160px;
+}
+
+
+.testimonials h1{
+    margin-bottom:30px;
+    font-family: var(--my-second-font);
+}
+
+
+.testimonials p{
+    font-family: var(--my-font);
+    line-height: 4rem;
+}
+
+.testimonials span{
+    font-size: 18px;
+    font-weight: bold;
+    color:var(--mainColor);
+    font-family: var(--my-second-font);
+    letter-spacing: .3rem;
+}
+/*testimonial's carousel editing*/
+
+.testimonials .carousel-indicators {  /*this is ol(ordered list)*/
+    position: static;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.testimonials .carousel-indicators li{
+    right: 0;
+    margin: 0 auto;
+    width: 55px;
+    height: 55px;
+    text-indent:0; /*we edit htis value , in bootstrap file it's -999*/
+    border: 3px solid #eaeaea;
+    margin: 0 5px;
+    opacity: .6;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+
+.testimonials .carousel-indicators li img{
+    max-width: 100%;
+}
+
+.testimonials .carousel-indicators .active{
+    opacity: 1;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*end testimonials section*/

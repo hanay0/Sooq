@@ -6,8 +6,29 @@
       
   }
 
+  
+
+  /*media queries*/
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+  /*media queries*/
+
   body{
-      height: 3000px;
+      height: 6000px;
   }
 /*the main navbar*/
 .navbar-inverse{
@@ -104,15 +125,13 @@
 
 .carousel-caption .btn {
     margin-right: 20px;
-
-}
-
-.btn {
     margin-bottom: 20px;
 }
 
+
+
 .carousel-caption {
-    bottom: 500px;
+    top: 150px;
     font-family: var(--my-font);
     background:hsla(29, 89%, 86%, 0.274);
     border-radius: 30px;
@@ -120,10 +139,10 @@
     padding-left: 20px;
 }
 /*here fix the issue of resizing images while zooming in & out*/
-.img-responsive, .thumbnail > img, .thumbnail a > img, .carousel-inner > .item > img, .carousel-inner > .item > a > img {
+#myslide .item > img{
+    height:500px;
     width: 100%;
-    height: auto;
-    object-fit: cover;
+    object-fit: contain;
 }
 
 
@@ -270,6 +289,7 @@ font-family: var(--my-font);
 .testimonials{
     padding-top: 50px;
     padding-bottom:50px;
+    margin-bottom: 50px;
     min-height: 400px; /*this minimum height just to be the same height of the background's*/
     background-color: rgba(235, 235, 235, 0.29);
 }
@@ -326,19 +346,385 @@ font-family: var(--my-font);
     opacity: 1;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /*end testimonials section*/
+
+
+/*start price table section*/
+.price-table{
+    padding: 40px 0 40px 0;
+    margin-bottom: 50px;
+}
+
+.price-table h1{
+    margin-bottom: 50px;
+    font-family: var(--my-second-font);
+    font-size: 6rem;
+    color: var(--mainColor);
+}
+
+.price-table .price-box{
+    border: 1px solid #d3d3d3;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    font-family: var(--my-font);
+    opacity: .7;
+    transition: all .2s ease-in-out;
+}
+
+.price-table .price-box:hover{
+    opacity: 1;
+    border: 1px solid var(--mainColor);
+    transform: scale(1.05);
+}
+
+
+.price-table .price-box i{
+    font-size: 80px;
+    color: var(--mainColor);
+}
+
+.price-table .price-box hr{
+    width: 60%;
+    border-top: none;
+    border-bottom: none;
+    border-style: solid;
+    border-width: 0.1em;
+    border-bottom: none;
+    color: #d3d3d3
+}
+
+
+/*this enable us to style elements while hovering another one*/
+
+.price-table .price-box:hover hr{ 
+    color: var(--mainColor);
+ }
+
+
+
+.price-table .price-box p{
+    font-size: 14px;
+}
+
+.price-table .price-box p span{
+    font-size: 40px;
+    font-weight: bold;
+}
+
+.price-table .price-box .price-features li{
+    margin:25px 0
+}
+
+.price-table .price-box .sign-up{
+    color: #fff;
+    background-color: var(--mainColor);
+    border-color: #fff;
+    padding: 10px 25px;
+}
+
+
+
+/*End price table section*/
+
+
+/*start our-team section*/
+
+.our-team{
+    width: 100%;
+    margin-bottom: 50px;
+    min-height: 600px;
+    font-family: var(--my-font);
+    background:url(../images/undraw_reminder_pa79.svg) no-repeat right center;
+    color: #000;
+    background-size: 100% 90%;
+}
+
+.our-team .our-team-background{
+    min-height: 600px;
+    background-color: rgba(255, 255, 255, 0.883);
+}
+
+.our-team .our-team-background h1{
+    margin-bottom: 40px;
+}
+
+.our-team .our-team-background .member{
+    margin-bottom: 30px;
+}
+
+.our-team .our-team-background .member img{
+    width: 200px;
+    height: 200px;
+    background: rgba(255, 255, 255, 1);
+    transition:all .5s ease-in-out
+}
+
+.our-team .our-team-background .member i{
+    margin: 0 1px 0 1px;
+
+}
+
+/*this is for resizing images on mobile*/
+@media screen and (max-width:700px) {
+    .our-team .our-team-background .member img{
+        width: 80px;
+        height: 80px;
+    }
+}
+
+
+.our-team .our-team-background .member span{
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 25px;
+    color: var(--mainColor);
+}
+
+
+.our-team .our-team-background .member ul{
+    padding:0;
+    list-style: none;
+}
+
+.our-team .our-team-background .member ul li{
+    margin: 0 5px;
+    display: inline-block;
+}
+
+.our-team .our-team-background .member ul li a{
+    color: #000;
+}
+/*end our team section*/
+
+
+/*start subscribe section*/
+
+
+.subscribe{
+    font-family:var(--my-font);
+    width: 100%;
+    height:340px;
+    background: url(../images/subscribe.svg);
+    background-repeat: no-repeat;
+    background-position: 20%;
+    background-size: contain;
+}
+
+/*for making background transparent*/
+.subscribe .sub-background{
+    min-height:340px;
+    background-color:rgba(255, 137, 41, 0.103)
+}
+
+.form-inline{
+    margin-top: 50px;
+}
+
+
+ .form-inline .form-control{
+    font-family: var(--my-second-font);
+    width: 350px;
+    text-align: center;
+}
+
+
+.form-inline .btn{
+    padding: 10px 18px;
+    background-color: var(--mainColor);
+    border-color: #FFF;
+}
+
+.form-inline .btn:hover{
+    background-color: #FFF;
+    color: var(--mainColor);
+    border-color: var(--mainColor);
+}
+
+
+/*media query for submit button after the input */
+@media screen and (max-width:840px) {
+    .form-inline input{
+        margin-bottom:20px
+    }
+
+    .form-inline .form-control{  /*this to fix inout shape while resizing*/
+        width: 100%;
+    }
+}
+
+
+@media screen and (max-width:700px) {
+    .subscribe .sub-background h1{
+       font-weight: bold;
+       color: var(--mainColor);
+       text-shadow: rgb(101, 102, 98) 1px 0 10px;
+    
+    }
+
+    .subscribe .sub-background p{
+        font-size:1.9rem ;
+        text-shadow: rgb(224, 169, 65) 1px 0 10px;
+     }
+}
+
+/*End subscribe section*/
+
+
+
+/*start statistics section*/
+
+.stats{
+    min-height: 500px;
+    background:url(../images/stats.svg) center center no-repeat;
+    background-size: 100% 100%;
+    font-family: var(--my-second-font);
+}
+
+.stats .stats-background{
+    min-height: 500px;
+    background: rgba(255,255,255, .88); 
+    padding-top:40px;
+    padding-bottom:40px;
+
+}
+
+.stats h1{
+    margin-bottom: 40px;
+    font-size: 6rem;
+}
+
+
+.stats .stats-background div{
+    min-height: 150px;
+    margin-top: 60px;
+}
+
+/*editing the icons*/
+.stats .stats-background div i{
+    font-size:6rem;
+    color: var(--mainColor);
+    margin-bottom: 15px;
+}
+/*editing the icons*/  
+
+.stats .stats-background div p{
+    font-weight: bold;
+    font-size: 3rem;
+    margin-bottom:0
+}
+
+.stats .stats-background div span{
+    font-family: var(--my-font);
+    font-size: 2.3rem;
+}
+  
+/*this is about the line under the number*/
+.stats .stats-background div .line {
+    width: 60px;
+    background: rgba(255, 134, 36, 0.7);
+    height: 2px;
+    display: block;
+    margin: 0 auto;
+    margin-bottom:10px
+}
+
+
+/*End statistics section*/
+
+
+/*start our-skills section*/
+
+/*start editing our-skills main section*/
+
+.our-skills{
+    padding-top:50px;
+    padding-bottom: 40px;
+    font-family:var(--my-font)
+}
+
+.our-skills .main-progress{
+    padding-top:55px
+}
+
+.our-skills h1{
+    margin-bottom:50px
+}
+
+.our-skills h3{
+    font-weight: bold;
+    margin-top:0
+}
+
+.our-skills .btn{
+    background-color: var(--mainColor);
+    border:1px solid #fff 
+}
+
+
+.progress {
+    margin-bottom:40px;
+    height: 36px;
+    background-color:rgba(255, 144, 85, 0.2);
+    border-radius: 18px;
+}
+
+.progress .progress-bar{
+    background-color: var(--mainColor);
+    line-height:36px; /*this is the same height as the progress's height*/
+    font-size:14px;
+}
+
+/*End our-skills section*/
+
+/* start contact us section */
+.contact-us{
+    font-family: var(--my-font);
+    width: 100%;
+    min-height: 340px;
+    background: url(../images/undraw_contact_us_15o2.svg);
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.contact-us .fields-container{
+    background: rgba(253, 159, 82, 0.727);
+    color: #FFF;
+    min-height: 340px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+
+.contact-us .fields-container h1{
+    font-size: 6rem;
+}
+
+.contact-us .fields-container p{
+    text-shadow: 2px 3px #FF923B;
+    margin-bottom: 40px;
+}
+
+.contact-us .fields-container .message{
+    width: 100%;
+    height: 100px;
+    color: #555;
+}
+
+.contact-us .fields-container .sign-up{
+    background-color: #fff;
+    border: 1px solid #CCC;
+    color: var(--mainColor);
+    transition: all .2s ease-in-out;
+}
+
+.contact-us .fields-container .sign-up:hover{
+    color: var(--mainColor);
+    background-color: #eaeaea;
+    color: ;
+}
+/* end contact us section */
+
